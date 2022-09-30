@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>登录页</title>
+</head>
+<body>
+
+<h1>登录页</h1>
+
+<p>请输入你的账号和密码</p>
+<div>
+  <label for="account">
+    账号：
+    <input id="account" type="text">
+  </label>
+  <label for="password">
+    账号：
+    <input id="password" type="password">
+  </label>
+</div>
+
+<button id="login">登录</button>
+
+<script>
+  document.querySelector('#login').onclick = function () {
+    const account = document.querySelector('#account').value;
+    const password = document.querySelector('#password').value;
+
+    alert(`账号：${account}，密码：${password}`);
+  }
+</script>
+</body>
+</html>
