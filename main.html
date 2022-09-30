@@ -7,10 +7,26 @@
 <body>
 <h1>这里的主应用</h1>
 
-<p>下面是子应用</p>
-<div id="container">
+<button onclick="loadApp()">加载子应用</button>
+<button onclick="unloadApp()">卸载子应用</button>
 
-</div>
+<div id="container"></div>
 
+<!-- css-isolation -->
+<script src="./css-isolation/scopedCSSIsolation.js"></script>
+<!-- js-sandbox -->
+<script src="./js-sandbox/SnapshotSandbox.js"></script>
+<!-- load -->
+<script src="./load/index.js"></script>
+<!--测试代码-->
+<script>
+  function loadApp() {
+    // 这里选择自己的 microApp.html 的本地地址
+    loadMicroApp('#container', 'microApp', 'http://localhost:63342/loadMicroApp/microApp.html');
+  }
+  function unloadApp() {
+    document.querySelector('#container').innerHTML = '';
+  }
+</script>
 </body>
 </html>

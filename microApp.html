@@ -3,6 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>登录页</title>
+  <style>
+    h1 {
+        color: red;
+    }
+  </style>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -20,10 +27,11 @@
   </label>
 </div>
 
-<button id="login">登录</button>
+<button class="btn btn-primary" onclick="login()">登录</button>
 
 <script>
-  document.querySelector('#login').onclick = function () {
+  console.log('我是微应用');
+  window.login = () => {
     const account = document.querySelector('#account').value;
     const password = document.querySelector('#password').value;
 
